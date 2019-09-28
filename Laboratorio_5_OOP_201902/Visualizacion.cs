@@ -7,7 +7,7 @@ namespace Laboratorio_5_OOP_201902
 {
     static class Visualizacion
     {
-   
+        
         public static void ShowHand(Hand hand)
             {
                 Console.WriteLine("Hand:");
@@ -57,12 +57,13 @@ namespace Laboratorio_5_OOP_201902
             }
         }
 
-        public static void GetUserInput(int maxInput, bool stopper = false)
+        public static int GetUserInput(int maxInput, bool stopper = false)
         {
             string input = Console.ReadLine();
+            int d;
             try
             {
-                int d = Convert.ToInt32(input);
+                d = Convert.ToInt32(input);
             }
             catch
             {
@@ -70,7 +71,7 @@ namespace Laboratorio_5_OOP_201902
             }
             if (stopper == true)
             {
-                if (Convert.ToInt32(input) <= maxInput && -1 <= Convert.ToInt32(input))
+                if (Convert.ToInt32(input) <=maxInput || -1 <= Convert.ToInt32(input))
                 {
                     Console.WriteLine(input);
                 }
@@ -82,7 +83,7 @@ namespace Laboratorio_5_OOP_201902
             }
             else
             {
-                if (Convert.ToInt32(input) <= maxInput && 0 <= Convert.ToInt32(input))
+                if (Convert.ToInt32(input) <= maxInput || 0 <= Convert.ToInt32(input))
                 {
                     Console.WriteLine(input);
                 }
@@ -91,8 +92,8 @@ namespace Laboratorio_5_OOP_201902
                     ConsoleError($"The option ({input}) is not valid, try again");
                 }
             }
-            
 
+            return Convert.ToInt32(input); 
         }
 
         public static void ConsoleError(string message)
@@ -108,7 +109,7 @@ namespace Laboratorio_5_OOP_201902
             for (int i = 1; i <= 2; i++)
             {
                 Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine($"Player {i} select Deck and Captain:");
+                Console.WriteLine(message);
                 Console.ForegroundColor = ConsoleColor.White;
             }
         }
