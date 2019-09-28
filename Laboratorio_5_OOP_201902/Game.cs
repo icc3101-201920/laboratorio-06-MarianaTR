@@ -166,7 +166,7 @@ namespace Laboratorio_5_OOP_201902
             StreamReader reader = new StreamReader(path);
             int deckCounter = 0;
             List<Card> cards = new List<Card>();
-            List<Deck> decks = new List<Deck>();
+            
 
 
             while (!reader.EndOfStream)
@@ -208,7 +208,7 @@ namespace Laboratorio_5_OOP_201902
         {
             string path = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent + @"\Files\Captains.txt";
             StreamReader reader = new StreamReader(path);
-            List<SpecialCard> captains = new List<SpecialCard>();
+            
             while (!reader.EndOfStream)
             {
                 string line = reader.ReadLine();

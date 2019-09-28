@@ -6,8 +6,10 @@ namespace Laboratorio_5_OOP_201902
 {
     class Program
     {
+
         static void Main(string[] args)
         {
+            /*
             Game game = new Game();
             game.AddDecks();
             game.AddCaptains();
@@ -47,10 +49,12 @@ namespace Laboratorio_5_OOP_201902
             //{
             //    Console.WriteLine($"{counter++}: {card.Name}");
             //}
-            
+            */
+            Game game = new Game();
+            game.Play();
 
             //Test draw card
-            
+
             //player.DrawCard();
             //counter = 1;
             //Console.WriteLine("\n New Player Hand:");
@@ -64,10 +68,10 @@ namespace Laboratorio_5_OOP_201902
             //{
             //    Console.WriteLine($"{counter++}: {card.Name}");
             //}
-            
+
 
             //Test play card
-            
+
             //player.PlayCard(6);
             //counter = 1;
             //Console.WriteLine("\n New Player Hand:");
@@ -78,8 +82,8 @@ namespace Laboratorio_5_OOP_201902
             //Console.WriteLine(String.Join(", ", board.GetMeleeAttackPoints()));
             //Console.WriteLine(String.Join(", ", board.GetRangeAttackPoints()));
             //Console.WriteLine(String.Join(", ", board.GetLongRangeAttackPoints()));
-            
-            
+
+
         }
     }
 }
